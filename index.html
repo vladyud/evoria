@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evória — Biorhythm Evolution</title>
+    <meta name="description" content="Evória is a system for analyzing, visualizing, and fine-tuning your personal life rhythms for mindful planning and workload management.">
+    
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #faf5ff 100%);
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --brand-blue: #2563eb;
+            --brand-green: #10b981;
+            --accent-hover: #1d4ed8;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 16px;
+        }
+
+        .container {
+            max-width: 540px;
+            width: 100%;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            padding: 36px 28px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 6px;
+        }
+
+        .app-logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .app-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .app-tagline {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--brand-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+        }
+
+        .btn-playstore {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.35);
+            transition: all 0.2s ease;
+            margin-bottom: 32px;
+        }
+
+        .btn-playstore:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -4px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-playstore:active {
+            transform: translateY(0);
+        }
+
+        .btn-playstore svg {
+            margin-right: 12px;
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        .features-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .feature-item {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 14px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-item::before {
+            content: "•";
+            position: absolute;
+            left: 6px;
+            top: -2px;
+            color: var(--brand-blue);
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .feature-item strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .footer-links {
+            text-align: center;
+            font-size: 0.88rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--brand-blue);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo and Title -->
+        <div class="header">
+            <img src="venn_diagram_rgb_final.png" alt="Evória Logo" class="app-logo">
+            <h1 class="app-title">Evória</h1>
+        </div>
+        <div class="app-tagline">Biorhythm Evolution</div>
+        
+        <p class="description">
+            Track biorhythms, build your own cycles, and forecast your energy levels.
+        </p>
+
+        <!-- Google Play Button -->
+        <a href="https://play.google.com/store/apps/details?id=com.evoria.cycles" target="_blank" rel="noopener noreferrer" class="btn-playstore">
+            <svg viewBox="0 0 24 24">
+                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+            </svg>
+            Get it on Google Play
+        </a>
+
+        <!-- Features List -->
+        <div class="features-title">Key Features</div>
+        <ul class="features-list">
+            <li class="feature-item"><strong>Daily Pulse:</strong> quick express forecasts and detailed state analytics for any selected date.</li>
+            <li class="feature-item"><strong>Personalized Recommendations:</strong> smart insights for productivity, rest, and balanced scheduling.</li>
+            <li class="feature-item"><strong>Individual Tuning:</strong> adaptive calibration of charts and composite rhythm balances to reflect your actual wellbeing.</li>
+            <li class="feature-item"><strong>Smart Adaptation:</strong> automatic fine-tuning of cycle parameters based on how you feel.</li>
+            <li class="feature-item"><strong>Expanded Cycle Support:</strong> work with classic biorhythms, circadian rhythms, and build your own simple and composite cycles.</li>
+            <li class="feature-item"><strong>Charts & Metrics:</strong> custom number of cycle charts and metrics for each profile.</li>
+            <li class="feature-item"><strong>Transition (Critical) Days:</strong> clear visual indicators for phase shift days, when your state may feel variable and requires extra attention.</li>
+            <li class="feature-item"><strong>Compatibility Calculation:</strong> accurate interaction analysis between multiple profiles for any cycle, accounting for individual settings.</li>
+            <li class="feature-item"><strong>Customizable Notifications:</strong> flexible alerts for crucial cycle shifts and important state changes.</li>
+            <li class="feature-item"><strong>Modern Widgets:</strong> quick access to cycle metrics and charts directly from your home screen.</li>
+            <li class="feature-item"><strong>Tablet & Foldable Support:</strong> fully adaptive layout optimized for large and foldable displays.</li>
+            <li class="feature-item"><strong>Multilingual Help System:</strong> detailed built-in guidance and knowledge base on working with cycles.</li>
+        </ul>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <a href="https://github.com/vladyud/evoria/wiki/Ev%C3%B3ria-App-Privacy-Policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </div>
+    </div>
+</body>
+</html>
