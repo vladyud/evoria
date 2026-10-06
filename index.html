@@ -9,11 +9,41 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="venn_diagram_rgb_final.png">
     <link rel="apple-touch-icon" href="venn_diagram_rgb_final.png">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Evória — Biorhythm Evolution">
+    <meta property="og:description" content="Track biorhythms, build your own cycles, and forecast your energy levels.">
+    <meta property="og:image" content="https://vladyud.github.io/evoria/venn_diagram_rgb_final.png">
+    <meta property="og:url" content="https://vladyud.github.io/evoria/">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org JSON-LD (For Google and Yandex) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Evória",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "HealthApplication",
+      "description": "System for analyzing, visualizing, and fine-tuning personal life rhythms.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "installUrl": "https://play.google.com/store/apps/details?id=com.evoria.cycles",
+      "inLanguage": [
+        "be", "bg", "cs", "da", "de", "el", "en", "es", "fi", "fr", 
+        "hu", "it", "iw", "ja", "ko", "nl", "no", "pl", "pt", "ro", 
+        "ru", "sk", "sv", "tr", "uk", "vi", "zh-CN", "zh-TW"
+      ]
+    }
+    </script>
     
     <!-- Google Fonts for Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -73,14 +103,14 @@
         }
 
         .app-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 2.1rem;
-    font-weight: 600;          /* Элегантный полужирный вместо массивного 800 */
-    letter-spacing: -0.02em;   /* Легкая подгонка букв делает надпись собранной и дорогой */
-    background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
         .app-tagline {
             text-align: center;
@@ -175,6 +205,42 @@
             font-weight: 700;
         }
 
+        .screenshots-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .screenshots-container {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 32px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screenshots-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .screenshots-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+
+        .screenshot-img {
+            width: 150px;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
         .footer-links {
             text-align: center;
             font-size: 0.88rem;
@@ -232,6 +298,19 @@
             <li class="feature-item"><strong>Tablet & Foldable Support:</strong> fully adaptive layout optimized for large and foldable displays.</li>
             <li class="feature-item"><strong>Multilingual Help System:</strong> detailed built-in guidance and knowledge base on working with cycles.</li>
         </ul>
+
+        <!-- Screenshots Gallery -->
+        <div class="screenshots-title">App Screenshots</div>
+        <div class="screenshots-container">
+            <img src="1_en.png" alt="Evória Screenshot 1" class="screenshot-img" loading="lazy">
+            <img src="2_en.png" alt="Evória Screenshot 2" class="screenshot-img" loading="lazy">
+            <img src="3_en.png" alt="Evória Screenshot 3" class="screenshot-img" loading="lazy">
+            <img src="4_en.png" alt="Evória Screenshot 4" class="screenshot-img" loading="lazy">
+            <img src="5_en.png" alt="Evória Screenshot 5" class="screenshot-img" loading="lazy">
+            <img src="6_en.png" alt="Evória Screenshot 6" class="screenshot-img" loading="lazy">
+            <img src="7_en.png" alt="Evória Screenshot 7" class="screenshot-img" loading="lazy">
+            <img src="8_en.png" alt="Evória Screenshot 8" class="screenshot-img" loading="lazy">
+        </div>
 
         <!-- Footer Links -->
         <div class="footer-links">
