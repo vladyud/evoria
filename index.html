@@ -91,8 +91,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
-            margin-bottom: 6px;
+            gap: 12px;
+            margin-bottom: 8px;
         }
 
         .app-logo {
@@ -102,14 +102,18 @@
             border-radius: 12px;
         }
 
-        .app-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.1rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .app-title-h1 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .app-title-img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
+            display: block;
         }
 
         .app-tagline {
@@ -263,10 +267,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header with Logo and Title -->
+        <!-- Header with Logo and Brand Name Image -->
         <div class="header">
             <img src="venn_diagram_rgb_final.png" alt="Evória Logo" class="app-logo">
-            <h1 class="app-title">Evória</h1>
+            <h1 class="app-title-h1">
+                <img src="evoria.png" alt="Evória" class="app-title-img">
+            </h1>
         </div>
         <div class="app-tagline">Biorhythm Evolution</div>
         
