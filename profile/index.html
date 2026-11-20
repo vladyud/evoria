@@ -2,15 +2,18 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=https://vladyud.github.io/evoria/" />
-  <link rel="canonical" href="https://vladyud.github.io/evoria/" />
   <title>Evoria</title>
   <script>
-    // replace() doesn't leave the redirect-page in the browser hictory
-    window.location.replace("https://vladyud.github.io/evoria/");
+    // 1. Try to open the app by custom deeplink and store ?data=...
+    window.location.href = "evoria://import_profile" + window.location.search;
+
+    // 2. If unsuccess - go to main page
+    setTimeout(function () {
+      window.location.replace("https://vladyud.github.io/evoria/");
+    }, 500);
   </script>
 </head>
 <body>
-  <p>Перенаправление на <a href="https://vladyud.github.io/evoria/">главную страницу Evoria</a>...</p>
+  <p>Открытие Evoria...</p>
 </body>
 </html>
